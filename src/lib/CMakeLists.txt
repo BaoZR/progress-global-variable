@@ -12,6 +12,10 @@ PUBLIC
 
 target_link_libraries(get_num )
 
+set_target_properties(get_num PROPERTIES
+    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+)
+
 
 set_target_properties(get_num PROPERTIES
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"

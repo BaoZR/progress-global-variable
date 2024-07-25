@@ -5,6 +5,10 @@ add_executable(demo test.cpp)
 target_link_libraries(demo 
 )
 
+set_target_properties(demo PROPERTIES
+    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+)
+
 
 
 if(MSVC)
